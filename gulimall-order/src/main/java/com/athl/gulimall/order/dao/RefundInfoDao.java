@@ -1,6 +1,6 @@
-package com.athl.gulimall.couon.dao;
+package com.athl.gulimall.order.dao;
 
-import com.athl.gulimall.couon.entity.RefundInfoEntity;
+import com.athl.gulimall.order.entity.RefundInfoEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 
  * @author huanglin
  * @email 2465652971@qq.com
- * @date 2020-07-16 11:46:08
+ * @date 2020-07-16 15:11:15
  */
 @Mapper
 public interface RefundInfoDao extends BaseMapper<RefundInfoEntity> {

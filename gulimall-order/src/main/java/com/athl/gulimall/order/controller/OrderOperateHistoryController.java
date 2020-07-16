@@ -1,4 +1,4 @@
-package com.athl.gulimall.couon.controller;
+package com.athl.gulimall.order.controller;
 
 import java.util.Arrays;
 import java.util.Map;
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.athl.gulimall.couon.entity.OrderOperateHistoryEntity;
-import com.athl.gulimall.couon.service.OrderOperateHistoryService;
+import com.athl.gulimall.order.entity.OrderOperateHistoryEntity;
+import com.athl.gulimall.order.service.OrderOperateHistoryService;
 import com.athl.common.utils.PageUtils;
 import com.athl.common.utils.R;
 
@@ -22,10 +22,10 @@ import com.athl.common.utils.R;
  *
  * @author huanglin
  * @email 2465652971@qq.com
- * @date 2020-07-16 11:46:08
+ * @date 2020-07-16 15:11:14
  */
 @RestController
-@RequestMapping("couon/orderoperatehistory")
+@RequestMapping("order/orderoperatehistory")
 public class OrderOperateHistoryController {
     @Autowired
     private OrderOperateHistoryService orderOperateHistoryService;

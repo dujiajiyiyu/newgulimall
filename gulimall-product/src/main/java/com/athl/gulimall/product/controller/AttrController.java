@@ -1,19 +1,14 @@
 package com.athl.gulimall.product.controller;
 
-import java.util.Arrays;
-import java.util.Map;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.athl.gulimall.product.entity.AttrEntity;
-import com.athl.gulimall.product.service.AttrService;
 import com.athl.common.utils.PageUtils;
 import com.athl.common.utils.R;
+import com.athl.gulimall.product.entity.AttrEntity;
+import com.athl.gulimall.product.service.AttrService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Arrays;
+import java.util.Map;
 
 
 
@@ -22,7 +17,7 @@ import com.athl.common.utils.R;
  *
  * @author huanglin
  * @email 2465652971@qq.com
- * @date 2020-07-16 11:41:16
+ * @date 2020-07-16 15:28:09
  */
 @RestController
 @RequestMapping("product/attr")

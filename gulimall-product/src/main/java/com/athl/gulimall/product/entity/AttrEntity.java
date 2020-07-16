@@ -2,17 +2,16 @@ package com.athl.gulimall.product.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
 
 import java.io.Serializable;
-import java.util.Date;
-import lombok.Data;
 
 /**
  * 商品属性
  * 
  * @author huanglin
  * @email 2465652971@qq.com
- * @date 2020-07-16 11:41:16
+ * @date 2020-07-16 15:28:09
  */
 @Data
 @TableName("pms_attr")

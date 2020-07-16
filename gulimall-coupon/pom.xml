@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.ithl.gulimall</groupId>
-    <artifactId>gulimall-couon</artifactId>
+    <artifactId>gulimall-coupon</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>gulimall-couon</name>
-    <description>Demo project for Spring Boot</description>
+    <name>gulimall-coupon</name>
+    <description>优惠卷服务</description>
 
     <properties>
         <java.version>1.8</java.version>

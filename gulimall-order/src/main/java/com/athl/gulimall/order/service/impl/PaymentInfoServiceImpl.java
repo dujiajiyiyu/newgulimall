@@ -1,4 +1,4 @@
-package com.athl.gulimall.couon.service.impl;
+package com.athl.gulimall.order.service.impl;
 
 import org.springframework.stereotype.Service;
 import java.util.Map;
@@ -8,9 +8,9 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.athl.common.utils.PageUtils;
 import com.athl.common.utils.Query;
 
-import com.athl.gulimall.couon.dao.PaymentInfoDao;
-import com.athl.gulimall.couon.entity.PaymentInfoEntity;
-import com.athl.gulimall.couon.service.PaymentInfoService;
+import com.athl.gulimall.order.dao.PaymentInfoDao;
+import com.athl.gulimall.order.entity.PaymentInfoEntity;
+import com.athl.gulimall.order.service.PaymentInfoService;
 
 
 @Service("paymentInfoService")

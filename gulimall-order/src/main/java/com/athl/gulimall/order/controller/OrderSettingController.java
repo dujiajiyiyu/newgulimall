@@ -1,4 +1,4 @@
-package com.athl.gulimall.couon.controller;
+package com.athl.gulimall.order.controller;
 
 import java.util.Arrays;
 import java.util.Map;
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.athl.gulimall.couon.entity.OrderSettingEntity;
-import com.athl.gulimall.couon.service.OrderSettingService;
+import com.athl.gulimall.order.entity.OrderSettingEntity;
+import com.athl.gulimall.order.service.OrderSettingService;
 import com.athl.common.utils.PageUtils;
 import com.athl.common.utils.R;
 
@@ -22,10 +22,10 @@ import com.athl.common.utils.R;
  *
  * @author huanglin
  * @email 2465652971@qq.com
- * @date 2020-07-16 11:46:08
+ * @date 2020-07-16 15:11:15
  */
 @RestController
-@RequestMapping("couon/ordersetting")
+@RequestMapping("order/ordersetting")
 public class OrderSettingController {
     @Autowired
     private OrderSettingService orderSettingService;

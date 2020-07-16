@@ -1,4 +1,4 @@
-package com.athl.gulimall.couon.service.impl;
+package com.athl.gulimall.order.service.impl;
 
 import org.springframework.stereotype.Service;
 import java.util.Map;
@@ -8,9 +8,9 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.athl.common.utils.PageUtils;
 import com.athl.common.utils.Query;
 
-import com.athl.gulimall.couon.dao.OrderSettingDao;
-import com.athl.gulimall.couon.entity.OrderSettingEntity;
-import com.athl.gulimall.couon.service.OrderSettingService;
+import com.athl.gulimall.order.dao.OrderSettingDao;
+import com.athl.gulimall.order.entity.OrderSettingEntity;
+import com.athl.gulimall.order.service.OrderSettingService;
 
 
 @Service("orderSettingService")

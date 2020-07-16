@@ -1,4 +1,4 @@
-package com.athl.gulimall.couon.entity;
+package com.athl.gulimall.order.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -12,7 +12,7 @@ import lombok.Data;
  * 
  * @author huanglin
  * @email 2465652971@qq.com
- * @date 2020-07-16 11:46:08
+ * @date 2020-07-16 15:11:15
  */
 @Data
 @TableName("oms_order_return_reason")

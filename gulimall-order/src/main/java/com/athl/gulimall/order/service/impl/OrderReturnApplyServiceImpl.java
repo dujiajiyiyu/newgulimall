@@ -1,4 +1,4 @@
-package com.athl.gulimall.couon.service.impl;
+package com.athl.gulimall.order.service.impl;
 
 import org.springframework.stereotype.Service;
 import java.util.Map;
@@ -8,9 +8,9 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.athl.common.utils.PageUtils;
 import com.athl.common.utils.Query;
 
-import com.athl.gulimall.couon.dao.OrderReturnApplyDao;
-import com.athl.gulimall.couon.entity.OrderReturnApplyEntity;
-import com.athl.gulimall.couon.service.OrderReturnApplyService;
+import com.athl.gulimall.order.dao.OrderReturnApplyDao;
+import com.athl.gulimall.order.entity.OrderReturnApplyEntity;
+import com.athl.gulimall.order.service.OrderReturnApplyService;
 
 
 @Service("orderReturnApplyService")
