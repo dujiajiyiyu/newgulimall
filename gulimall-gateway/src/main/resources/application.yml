@@ -7,6 +7,12 @@ spring:
         server-addr: 127.0.0.1:8848
     gateway:
       routes:
+        - id: gulimall-member
+          uri: lb://gulimall-member
+          predicates:
+            - Path=/api/member/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
         - id: gulimall-third-party
           uri: lb://gulimall-third-party
           predicates:

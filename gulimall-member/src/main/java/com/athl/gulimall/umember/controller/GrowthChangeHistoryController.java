@@ -1,19 +1,14 @@
 package com.athl.gulimall.umember.controller;
 
-import java.util.Arrays;
-import java.util.Map;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.athl.gulimall.umember.entity.GrowthChangeHistoryEntity;
-import com.athl.gulimall.umember.service.GrowthChangeHistoryService;
 import com.athl.common.utils.PageUtils;
 import com.athl.common.utils.R;
+import com.athl.gulimall.umember.entity.GrowthChangeHistoryEntity;
+import com.athl.gulimall.umember.service.GrowthChangeHistoryService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Arrays;
+import java.util.Map;
 
 
 
@@ -25,7 +20,7 @@ import com.athl.common.utils.R;
  * @date 2020-07-16 12:24:12
  */
 @RestController
-@RequestMapping("umember/growthchangehistory")
+@RequestMapping("member/growthchangehistory")
 public class GrowthChangeHistoryController {
     @Autowired
     private GrowthChangeHistoryService growthChangeHistoryService;

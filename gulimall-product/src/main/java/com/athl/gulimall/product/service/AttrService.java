@@ -1,8 +1,10 @@
 package com.athl.gulimall.product.service;
 
-import com.baomidou.mybatisplus.extension.service.IService;
 import com.athl.common.utils.PageUtils;
 import com.athl.gulimall.product.entity.AttrEntity;
+import com.athl.gulimall.product.entity.vo.AttrResVo;
+import com.athl.gulimall.product.entity.vo.AttrVo;
+import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.Map;
 
@@ -16,5 +18,13 @@ import java.util.Map;
 public interface AttrService extends IService<AttrEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    PageUtils queryByCid(Map<String, Object> params, Long catelogId, String attrType);
+
+    void saveVo(AttrVo attr);
+
+    AttrResVo getAttrInfo(Long attrId);
+
+    void updateVo(AttrVo attr);
 }
 
