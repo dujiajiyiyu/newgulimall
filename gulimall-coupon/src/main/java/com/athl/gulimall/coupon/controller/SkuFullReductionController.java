@@ -1,19 +1,15 @@
 package com.athl.gulimall.coupon.controller;
 
-import java.util.Arrays;
-import java.util.Map;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.athl.gulimall.coupon.entity.SkuFullReductionEntity;
-import com.athl.gulimall.coupon.service.SkuFullReductionService;
+import com.athl.common.to.SkuReductionTo;
 import com.athl.common.utils.PageUtils;
 import com.athl.common.utils.R;
+import com.athl.gulimall.coupon.entity.SkuFullReductionEntity;
+import com.athl.gulimall.coupon.service.SkuFullReductionService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Arrays;
+import java.util.Map;
 
 
 
@@ -30,6 +26,16 @@ public class SkuFullReductionController {
     @Autowired
     private SkuFullReductionService skuFullReductionService;
 
+    /**
+     * 供远程调用保存sku的满减信息和会员价格等
+     *
+     * @return
+     */
+    @PostMapping("/saveInfo")
+    public R saveInfo(@RequestBody SkuReductionTo skuReductionTo) {
+        skuFullReductionService.saveSkuReduction(skuReductionTo);
+        return R.ok();
+    }
     /**
      * 列表
      */

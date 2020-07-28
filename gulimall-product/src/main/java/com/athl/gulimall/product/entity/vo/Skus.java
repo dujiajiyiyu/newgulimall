@@ -5,6 +5,7 @@ package com.athl.gulimall.product.entity.vo;
 
 import lombok.Data;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -24,11 +25,10 @@ public class Skus {
     private List<Images> images;
     private List<String> descar;
     private int fullCount;
-    private int discount;
+    private BigDecimal discount;
     private int countStatus;
-    private int fullPrice;
-    private int reducePrice;
+    private BigDecimal fullPrice;
+    private BigDecimal reducePrice;
     private int priceStatus;
     private List<MemberPrice> memberPrice;
-
 }
