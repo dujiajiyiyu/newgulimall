@@ -9,8 +9,14 @@ spring:
         server-addr: 127.0.0.1:8848
     gateway:
       routes:
+        - id: gulimall-ware
+          uri: lb://gulimall-ware
+          predicates:
+            - Path=/api/ware/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
         - id: gulimall-coupon
-          uri: lb:gulimall-coupon
+          uri: lb://gulimall-coupon
           predicates:
             - Path=/api/coupon/**
           filters:

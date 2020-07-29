@@ -3,17 +3,12 @@ package com.athl.gulimall.product.service.impl;
 import com.athl.common.constant.ProductConstant;
 import com.athl.common.utils.PageUtils;
 import com.athl.common.utils.Query;
-import com.athl.gulimall.product.dao.AttrAttrgroupRelationDao;
-import com.athl.gulimall.product.dao.AttrDao;
-import com.athl.gulimall.product.dao.AttrGroupDao;
-import com.athl.gulimall.product.dao.CategoryDao;
-import com.athl.gulimall.product.entity.AttrAttrgroupRelationEntity;
-import com.athl.gulimall.product.entity.AttrEntity;
-import com.athl.gulimall.product.entity.AttrGroupEntity;
-import com.athl.gulimall.product.entity.CategoryEntity;
+import com.athl.gulimall.product.dao.*;
+import com.athl.gulimall.product.entity.*;
 import com.athl.gulimall.product.entity.vo.AttrResVo;
 import com.athl.gulimall.product.entity.vo.AttrVo;
 import com.athl.gulimall.product.service.AttrService;
+import com.athl.gulimall.product.service.ProductAttrValueService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -42,6 +37,12 @@ public class AttrServiceImpl extends ServiceImpl<AttrDao, AttrEntity> implements
 
     @Resource
     private CategoryServiceImpl categoryService;
+
+    @Resource
+    private ProductAttrValueService productAttrValueService;
+
+    @Resource
+    private ProductAttrValueDao productAttrValueDao;
 
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
@@ -158,5 +159,37 @@ public class AttrServiceImpl extends ServiceImpl<AttrDao, AttrEntity> implements
                 attrAttrgroupRelationDao.insert(relationEntity);
             }
         }
+    }
+
+    /**
+     * 获取spu规格
+     *
+     * @param spuId
+     * @return
+     */
+    @Override
+    public List<ProductAttrValueEntity> getSpuSpecification(Long spuId) {
+        List<ProductAttrValueEntity> productAttrValueEntities = productAttrValueDao.selectList(new QueryWrapper<ProductAttrValueEntity>()
+                .eq("spu_id", spuId));
+        return productAttrValueEntities;
+    }
+
+    /**
+     * 修改商品规格
+     *
+     * @param spuId
+     * @param productAttrValueEntities
+     */
+    @Override
+    public void updateSpecification(Long spuId, List<ProductAttrValueEntity> productAttrValueEntities) {
+        // 删除老数据
+        productAttrValueService.remove(new QueryWrapper<ProductAttrValueEntity>()
+                .eq("spu_id", spuId));
+        // 插入新数据
+        List<ProductAttrValueEntity> collect = productAttrValueEntities.stream().map(item -> {
+            item.setSpuId(spuId);
+            return item;
+        }).collect(Collectors.toList());
+        productAttrValueService.saveBatch(collect);
     }
 }

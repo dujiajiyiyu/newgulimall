@@ -2,6 +2,7 @@ package com.athl.gulimall.product.controller;
 
 import com.athl.common.utils.PageUtils;
 import com.athl.common.utils.R;
+import com.athl.gulimall.product.entity.ProductAttrValueEntity;
 import com.athl.gulimall.product.entity.vo.AttrResVo;
 import com.athl.gulimall.product.entity.vo.AttrVo;
 import com.athl.gulimall.product.service.AttrService;
@@ -9,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 
@@ -24,6 +26,24 @@ import java.util.Map;
 public class AttrController {
     @Autowired
     private AttrService attrService;
+
+    @PostMapping("/update/{spuId}")
+    public R updateSpecification(@PathVariable("spuId") Long spuId,
+                                 @RequestBody List<ProductAttrValueEntity> productAttrValueEntities) {
+        attrService.updateSpecification(spuId, productAttrValueEntities);
+        return R.ok();
+    }
+
+    /**
+     * 获取spu规格
+     *
+     * @return
+     */
+    @GetMapping("/base/listforspu/{spuId}")
+    public R getSpuSpecification(@PathVariable("spuId") Long spuId) {
+        List<ProductAttrValueEntity> spuSpecification = attrService.getSpuSpecification(spuId);
+        return R.ok().put("data", spuSpecification);
+    }
 
     /**
      * 列表

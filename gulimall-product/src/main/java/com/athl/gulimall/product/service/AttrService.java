@@ -2,10 +2,12 @@ package com.athl.gulimall.product.service;
 
 import com.athl.common.utils.PageUtils;
 import com.athl.gulimall.product.entity.AttrEntity;
+import com.athl.gulimall.product.entity.ProductAttrValueEntity;
 import com.athl.gulimall.product.entity.vo.AttrResVo;
 import com.athl.gulimall.product.entity.vo.AttrVo;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -26,5 +28,10 @@ public interface AttrService extends IService<AttrEntity> {
     AttrResVo getAttrInfo(Long attrId);
 
     void updateVo(AttrVo attr);
+
+    List<ProductAttrValueEntity> getSpuSpecification(Long spuId);
+
+    void updateSpecification(Long spuId, List<ProductAttrValueEntity> productAttrValueEntities);
+
 }
 
