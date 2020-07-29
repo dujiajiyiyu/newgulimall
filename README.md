@@ -1,23 +1,88 @@
 # newgulimall
 
 #### 介绍
-新 谷粒商城
+新 谷粒商城项目是一个较大型的分布式电商项目，主要后端采用 Spirngboot 2.3.1.RELEASE，前端使用Vue。
+
+前后端简单crud代码均由人人开源的自动生成器生成，学习只用关心较难的业务逻辑。是一个较为不错的进阶springboot的电商项目。
+
+#### 技术栈
+
+JavaSe
+
+Springboot 
+
+Mysql
+
+Vue
+
+Swagger
+
+阿里云oss
+
+Springcloud ： nacos  , openfeign ， gateway 等
 
 #### 软件架构
-软件架构说明
+gulimall-common  共需的共有包，其中包括共同的依赖，to, 常量，统一异常处理， 一些工具类等
 
+gulimall-coupon  优惠券服务，管理优惠卷和满减信息
+
+gulimall-gateway 网关服务 , 进行服务转发和负载均衡 端口为88
+
+gulimall-member 用户管理服务
+
+gulimall-order 订单服务
+
+gulimall-product 商品服务
+
+gulimall-thrid-party 第三方服务（oss）
+
+gulimall-ware 仓库服务
+
+renren-fast 人人开源的默认后台系统
+
+renren-generator 自动生成代码
 
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1. 下载项目
+
+   ```shell
+   git clone https://gitee.com/liner123/newgulimall.git
+   ```
+
+2.  使用 IDEA 或者 Eclipse 进行打开
+
+3. 建数据库，如图。 
+
+   ![image-20200729180525690](C:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20200729180525690.png)
+
+4. 导入sql文件（sql文件放在每一个微服务的resource文件下的sql文件架中）
+
+5. 修改各微服务的 application.yml 文件对应自己的数据库地址和数据库名称，用户，密码
+
+6. 安装nacos，并在application.yml 中配置nacos的注册地址，启动nacos
+
+7. 若要使用 gulimall-thrid-party 第三方服务里面的oss 需要自己去阿里云获取自己的 endpoint accessId  secret-key bucket 等，
+
+   然后修改application.yml 将其修改为自己的。
+
+8. 启动上述各个微服务。
+
+9. 前端服务地址 https://gitee.com/liner123/new-gulimall-vue.git
+
+10.  ```shell
+     git clone  https://gitee.com/liner123/new-gulimall-vue.git  // 下载前端项目
+     
+     npm run dev //启动前端项目
+     ```
+
+11. 访问  localhost:8001 
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+随便用
+
+尽量按照我的安装教程弄，因为需要建较多数据库，尽量不要出现错误。
 
 #### 参与贡献
 
@@ -26,12 +91,5 @@
 3.  提交代码
 4.  新建 Pull Request
 
-
-#### 码云特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+#### 联系QQ
+QQ:2465652971
