@@ -9,8 +9,8 @@ spring:
         server-addr: 127.0.0.1:8848
     #    oss配置
     alicloud:
-      access-key: LTAI4G9qTMpZU
-      secret-key: K8VVKnc6BwkWc8
+      access-key: LTAI4G9qTMpZUXiTFFb6NpTc
+      secret-key: K8VVKnc6BwkWc8QF4QF3uI
       oss:
         endpoint: oss-cn-beijing.aliyuncs.com
         bucket: gulimall-i

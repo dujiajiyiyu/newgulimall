@@ -54,8 +54,21 @@ renren-generator 自动生成代码
 
 3. 建数据库，如图。 
 
-   ![image-20200729180525690](C:\Users\asus\AppData\Roaming\Typora\typora-user-images\image-20200729180525690.png)
+      ![](renren-generator\picture\1.png)
 
+##### 数据库和微服务对应关系
+
+> gulimall-admin ------ renren-fast
+>
+> gulimall-oms ----- gulimall-order
+>
+> gulimall-pms ----- gulimall-product
+>
+> gulimall-sms ----- gulimall-coupon
+>
+> gulimall-ums ----- gulimall-member
+>
+> gulimall-wms ----- gulimall-ware
 4. 导入sql文件（sql文件放在每一个微服务的resource文件下的sql文件架中）
 
 5. 修改各微服务的 application.yml 文件对应自己的数据库地址和数据库名称，用户，密码
