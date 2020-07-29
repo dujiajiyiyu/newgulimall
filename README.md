@@ -56,6 +56,7 @@ renren-generator 自动生成代码
 
       ![](renren-generator\picture\1.png)
 
+图片路径在 renren-generator\picture\1.png
 ##### 数据库和微服务对应关系
 
 > gulimall-admin ------ renren-fast
