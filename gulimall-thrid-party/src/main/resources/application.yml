@@ -10,7 +10,7 @@ spring:
     #    oss配置
     alicloud:
       access-key: LTAI4G9qTMpZUXiTFFb6NpTc
-      secret-key: K8VVKnc6BwkWc8Q
+      secret-key: K8VVKnc6B2
       oss:
         endpoint: oss-cn-beijing.aliyuncs.com
         bucket: gulimall-i

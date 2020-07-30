@@ -40,23 +40,32 @@ gulimall-ware 仓库服务
 
 renren-fast 人人开源的默认后台系统
 
-renren-generator 自动生成代码
+renren-generator 代码生成器
 
-#### 安装教程
+### 安装教程
 
-1. 下载项目
+1. 确保安装环境，安装node-js v10.2.4 以上，安装地址 [http://nodejs.cn/](http://nodejs.cn/)
+
+2. 安装git 版本控制 [https://gitforwindows.org/](https://gitforwindows.org/)
+
+3. 安装mysql5.7 [https://www.mysql.com/](https://www.mysql.com/)
+
+4. git终端 下载项目
 
    ```shell
    git clone https://gitee.com/liner123/newgulimall.git
    ```
 
-2.  使用 IDEA 或者 Eclipse 进行打开
+5. 使用 IDEA 或者 Eclipse 进行打开 Eclipse安装地址 [https://www.eclipse.org/](https://www.eclipse.org/) IDEA安装地址 [https://www.jetbrains.com/idea/](https://www.jetbrains.com/idea/) 
 
-3. 建数据库，如图。 
+6. 建数据库，如图。 
 
-      ![](renren-generator\picture\1.png)
+      ![2.png](./renren-generator\picture\2.png)
 
-图片路径在 renren-generator\picture\1.png
+      ![1.png](./renren-generator\picture\1.png)
+
+      
+
 ##### 数据库和微服务对应关系
 
 > gulimall-admin ------ renren-fast
@@ -86,11 +95,15 @@ renren-generator 自动生成代码
 
 10.  ```shell
      git clone  https://gitee.com/liner123/new-gulimall-vue.git  // 下载前端项目
-     
-     npm run dev //启动前端项目
      ```
 
-11. 访问  localhost:8001 
+11. 进入安装目录，在终端使用命令
+
+     ```shell
+    npm run dev
+     ```
+
+12.  项目启动成功，访问 localhost:8001 
 
 #### 使用说明
 
