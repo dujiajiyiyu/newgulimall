@@ -60,9 +60,9 @@ renren-generator 代码生成器
 
 6. 建数据库，如图。 
 
-      ![2.png](./renren-generator\picture\2.png)
+      ![2.png](../newgulimall/renren-generator\picture\2.png)
 
-      ![1.png](./renren-generator\picture\1.png)
+      ![1.png](../newgulimall/renren-generator\picture\1.png)
 
       
 
